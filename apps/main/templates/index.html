@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Nunito+Sans:opsz@6..12&family=Poppins&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            
+            display: grid;
+            grid-template-rows: 75px 1fr;
+            grid-template-areas:
+            "header"
+            "main";
+            min-height: 100%;
+            overflow: hidden;
+        }
+
+        body.loaded {
+            opacity: 1;
+            transition: opacity 0.6s ease;
+        }
+
+        .header {
+            grid-area: header;
+            display: flex;
+            color: black;
+            text-decoration: none;
+            font-size: 1.3em;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .header, .logo, .navbar, .box-container {
+            animation: fadeUp 1s ease-out;
+        }
+
+        .header .logo {
+            text-decoration: none;
+            color: blue;
+            margin-left: 10px;
+            position: relative;
+            left: 63px;
+        }
+        .header .navbar a {
+            color: black;
+            text-decoration: none;
+            margin-right: 50px;
+            transition: .3s;
+        }
+
+        .header .navbar a:hover {
+            transform: scale(1.7);
+            color: orange;
+        }
+
+        .header .logo:hover {
+            color: green;
+        }
+
+        .main {
+            grid-area: main;
+            background: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main .box-container {
+            height: 450px;
+            width: 90%;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 800px 1fr;
+            grid-gap: 10px;
+        }
+
+        .box-container .aboutme {
+            height: 450px;
+            background: linear-gradient(45deg, #ef32d9, #89fffd);
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 40px;
+            transition: .3s;
+        }
+
+        .aboutme h1, p, .aboutme a {
+            margin-left: 30px;
+            transition: .3s;
+        }
+
+        .illustration {transition: .3s}
+
+        .box-container .illustration:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .aboutme:hover {
+            transform: scale(1.1);
+        }
+
+        .box-container .illustration {
+            background: rgba(0,0,0,0.5);
+            margin-top: 15px;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5)
+        }
+
+        .box-container .illustration img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0%;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 100%;
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    document.body.classList.add("loaded");
+});
+    </script>
+
+
+    <div class="header">
+        <a href="#" class="logo">Logo</a>
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="#">Contacts</a>
+            <a href="#">Profile</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="box-container">
+            <div class="aboutme">
+                <h1>About Me</h1>
+                <p>Hi, im Sam - web designer</p>
+                <p>Im studying at university</p>
+                <p>Ready to implement excellent projects <br/>with wonderful people</p>
+            </div>
+            <div class="illustration">
+                <img src="illustration.avif" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
