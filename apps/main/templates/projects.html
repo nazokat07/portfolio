@@ -1,153 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projects</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Nunito+Sans:opsz@6..12&family=Poppins&display=swap');
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Montserrat", sans-serif;
-            min-height: 100%;
-            min-width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        body.loaded {
-            opacity: 1;
-            transition: opacity 0.6s ease;
-        }
-
-        html, body{
-            animation: fadeUp 1s ease-out;
-        }
-
-        .box-container {
-            display: grid;
-            width: 90%;
-            height: 550px;
-            grid-template-columns: 600px 1fr 1fr;
-            grid-template-rows: 250px 250px; 
-            grid-gap: 15px;
-            grid-template-areas: 
-            "first second third"
-            "first four five"
-        }
-
-        .box-container a {
-            position: relative;
-            overflow: hidden;
-            box-shadow: 5px 4px 8px rgba(0,0,0,0.7);
-            border-radius: 10px;
-            transition: filter 0.3s ease;
-
-        }
-
-        .box-container a:nth-child(1) {
-            grid-area: first;
-        }
-
-        .box-container a img {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            transition: filter 0.3s ease;
-        }
-
-        .box-container a::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .box-container a:hover::before {
-            opacity: 1;
-        }
-
-        .box-container a h2{
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            margin: 0;
-            color: white;
-            margin-bottom: 50px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .box-container a p {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            margin: 0;
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .box-container a:hover h2, .box-container a:hover p{
-            opacity: 1;
-        }
-
-        @keyframes fadeup {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
-    </style>
+    <title>Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add("loaded");
-});
-    </script>
-    <h1>Projects</h1>
-    <div class="box-container">
-        <a href="#">
-            <img src="main-a.jpg" alt="">
-            <h2>Kiymeshek</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </a>
-        <a href="#">
-            <img src="menu-photo.avif" alt="">
-            <h2>my project</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-        </a>
-        <a href="#">
-            <img src="menu-photo.avif" alt="">
-            <h2>my project</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </a>
-        <a href="#">
-            <img src="menu-photo.avif" alt="">
-            <h2>my project</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </a>
-        <a href="#">
-            <img src="menu-photo.avif" alt="">
-            <h2>my project</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-        </a>
+    <div class="flex h-[10vh] px-[10%] justify-between items-center bg-indigo-300 text-white">
+        <h1 class="text-3xl">Logo</h1>
+
+        <div class="flex gap-10">
+            <a href="home.html">Home</a>
+            <a href="#" class="text-indigo-800">Projects</a>
+            <a href="about.html">About me</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </div>
 
-    <a href="index.html">go to main page</a>
+    <div class="flex items-center justify-center px-[10%] flex-col py-5 gap-5">
+        <div class="flex justify-between gap-10 border rounded-md p-5">
+            <div class="bg-yellow-500 w-[40%] h-[200px]">
+
+            </div>
+            <div class="w-[60%]">
+                <h1 class="text-3xl font-bold">Project title</h1>
+                <p>o project. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sed laudantium, porro blanditiis aspernatur sapiente consequuntur neque ducimus temporibus accusamus cum nemo eius, nulla tempore? In hic libero fugiat quo!</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

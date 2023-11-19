@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update, delete posts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+
+    <style>
+        th,td {
+            padding: 10px 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex h-[10vh] px-[10%] justify-between items-center bg-indigo-300 text-white">
+        <h1 class="text-3xl">Logo</h1>
+
+        <div class="flex gap-10">
+            <a href="admin.html" class="text-indigo-800">Add post</a>
+            <a href="#">All posts</a>
+        </div>
+    </div>
+
+    <div class="px-[10%] py-10">
+        <table class="table-auto">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Photo</th>
+                <th>title</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>image</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td class="flex justify-between">
+                    <button><i class="fa-solid fa-pen text-blue-500"></i></button>
+                    <button><i class="fa-solid fa-trash text-red-500"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>image</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td class="flex justify-between">
+                    <button><i class="fa-solid fa-pen text-blue-500"></i></button>
+                    <button><i class="fa-solid fa-trash text-red-500"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>image</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td class="flex justify-between">
+                    <button><i class="fa-solid fa-pen text-blue-500"></i></button>
+                    <button><i class="fa-solid fa-trash text-red-500"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+</body>
+</html>

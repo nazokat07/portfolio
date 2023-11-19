@@ -7,8 +7,6 @@ urlpatterns = [
     path('users/<int:pk>', UsersDetailAPIView.as_view()),
     path('posts/', PostsAPIView.as_view()),
     path('posts/<int:pk>', PostsDetailAPIView.as_view()),
-    path('comments/', CommentsAPIView.as_view()),
-    path('comments<int:pk>', CommentsDetailAPIView.as_view()),
 ]
 
     

@@ -13,12 +13,4 @@ class PostsAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'title')
     ordering = ('title',)
 
-@admin.register(Comments)
-class CommentsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'text')
-    list_display_links = ('id', 'text')
-    ordering = ('text',)
-
-
-
 

@@ -4,23 +4,34 @@ from .forms import ProductForm
 
 
 
-def index(request):
-    return render(request,'index.html')
+def about(request):
+    return render(request,'about.html')
 
 
 def projects(request):
     return render(request,'projects.html')
 
+def admin(request):
+    return render(request, 'admin.html')
 
-def registration(request):
+def allpost(request):
+    return render(request, 'allpost.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def home(request):
+    return render(request, 'home.html')
+
+def index(request):
     if request.method == 'POST':
         form = ProductForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(to='index')
+            return redirect(to='home')
     else:
         form = ProductForm()
-    return render(request, 'registration.html', {'form': form})
+    return render(request, 'index.html', {'form': form})
     
     #print(ProductForm(request.POST).is_valid())
     #context = {
