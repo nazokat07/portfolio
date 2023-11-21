@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,12 +11,19 @@
 
 <body>
     <div class="flex h-[10vh] px-[10%] justify-between items-center bg-indigo-300 text-white">
-        <h1 class="text-3xl">Logo</h1>
-
+        <img src="https://seeklogo.com/images/A/adobe-portfolio-logo-BD502F658C-seeklogo.com.png" alt="logo" width="50px" height="50px">
+        <style>.shifted-text {
+            margin-right: 900px;
+            margin-left: 20px; 
+            font-size: 28px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: black;
+        }</style>
+        <p class="shifted-text">Portfolio</p>
         <div class="flex gap-10">
             <a href="#" class="text-indigo-800">Home</a>
             <a href="projects.html">Projects</a>
-            <a href="about.html">About me</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </div>
@@ -23,6 +31,7 @@
     <div class="flex items-center justify-center h-[90vh] flex-col">
         <h1 class="text-6xl font-bold">My Name is Nazokat</h1>
         <p class="text-2xl">I'm a backend developer</p>
+        <img src="{% static 'logo/photo.avif' %}" alt="">
     </div>
 </body>
 

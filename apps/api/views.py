@@ -1,12 +1,18 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.status import *
+from rest_framework import generics
 
 from apps.main.models import *
 
 from .api import get_weather_data
 from .serializers import UsersSerializer
 from .serializers import PostsSerializer
+from .serializers import PostSerializer
+
+class PostListCreateView(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
 
 
 

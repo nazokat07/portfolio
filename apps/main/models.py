@@ -1,5 +1,13 @@
 from django.db import models
 
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    photo = models.ImageField(upload_to='static/images', blank=True, null=True)
+
+
+
 class Product(models.Model):
 
     email = models.CharField(max_length=250)
