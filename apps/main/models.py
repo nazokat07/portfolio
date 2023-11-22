@@ -1,25 +1,8 @@
 from django.db import models
 
-
-
 class Post(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)    
     photo = models.ImageField(upload_to='static/images', blank=True, null=True)
-
-
-
-class Product(models.Model):
-
-    email = models.CharField(max_length=250)
-    password = models.CharField(max_length=250)
-
-    def __str__(self):
-        return self.email
-    
-    class Meta:
-        ordering = ['-id']
-
-
 
 
 class Users(models.Model):
@@ -32,12 +15,6 @@ class Users(models.Model):
         return f'{self.id}'
 
 
-class Posts(models.Model):
-    title = models.CharField(max_length=256)
-    text = models.TextField()
-    
 
-    def __str__(self):
-        return f'{self.id}'
     
 

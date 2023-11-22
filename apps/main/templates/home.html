@@ -7,31 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../static/images/facee.jpg) no-repeat;
+            background-size: cover
+        }
+
+        .glass {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="flex h-[10vh] px-[10%] justify-between items-center bg-indigo-300 text-white">
-        <img src="https://seeklogo.com/images/A/adobe-portfolio-logo-BD502F658C-seeklogo.com.png" alt="logo" width="50px" height="50px">
-        <style>.shifted-text {
+    <div class="flex h-[10vh] glass px-[10%] justify-between items-center text-white">
+        <div class="flex items-center gap-5">
+            <img src="https://seeklogo.com/images/A/adobe-portfolio-logo-BD502F658C-seeklogo.com.png" alt="logo"
+                width="30px" height="30px">
+            <!-- <style>.shifted-text {
             margin-right: 900px;
             margin-left: 20px; 
             font-size: 28px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: black;
-        }</style>
-        <p class="shifted-text">Portfolio</p>
+        }</style> -->
+            <p class="text-3xl font-bold text-black ">Portfolio</p>
+        </div>
         <div class="flex gap-10">
-            <a href="#" class="text-indigo-800">Home</a>
+            <a href="#" class="text-yellow-500">Home</a>
             <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </div>
 
-    <div class="flex items-center justify-center h-[90vh] flex-col">
-        <h1 class="text-6xl font-bold">My Name is Nazokat</h1>
-        <p class="text-2xl">I'm a backend developer</p>
-        <img src="{% static 'logo/photo.avif' %}" alt="">
+    <div class="flex items-center anibg justify-center h-[90vh] flex-col">
+        <h1 class="text-6xl font-bold text-white">My Name is Nazokat</h1>
+        <p class="text-2xl text-white">I'm a backend developer</p>
+        <!-- <img src="{% static 'logo/photo.avif' %}" alt=""> -->
     </div>
 </body>
 

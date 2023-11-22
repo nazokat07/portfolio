@@ -7,8 +7,9 @@ class UsersAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'name')
     ordering = ('name',)
 
-@admin.register(Posts)
-class PostsAdmin(admin.ModelAdmin):
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')
     list_display_links = ('id', 'title')
     ordering = ('title',)

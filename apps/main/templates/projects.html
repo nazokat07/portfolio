@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
     <div class="flex h-[10vh] px-[10%] justify-between items-center bg-indigo-300 text-white">
-        <img src="https://seeklogo.com/images/A/adobe-portfolio-logo-BD502F658C-seeklogo.com.png" alt="logo" width="50px" height="50px">
-        <style>.shifted-text {
-            margin-right: 900px;
-            margin-left: 20px; 
-            font-size: 28px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: black;
-        }</style>
-        <p class="shifted-text">Portfolio</p>
+        <div class="flex items-center gap-5">
+            <img src="https://seeklogo.com/images/A/adobe-portfolio-logo-BD502F658C-seeklogo.com.png" alt="logo" width="50px" height="50px">
+        <p class="text-3xl font-bold text-black">Portfolio</p>   
+        </div>
 
         <div class="flex gap-10">
             <a href="home.html">Home</a>
@@ -28,18 +35,17 @@
         </div>
     </div>
 
-    <div class="flex items-center justify-center px-[10%] flex-col py-5 gap-5">
-        <div class="flex justify-between gap-10 border rounded-md p-5">
-            <div class="bg-yellow-500 w-[40%] h-[200px]">
-
-            </div>
+    <div id="posts" class="flex flex-wrap px-[10%] py-5 gap-5">
+        <!-- <div class="flex justify-between gap-10 border rounded-md p-5">
+            <img class="bg-yellow-500 w-[40%] h-[200px]" src="" alt="">
             <div class="w-[60%]">
                 <h1 class="text-3xl font-bold">Project title</h1>
                 <p>o project. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sed laudantium, porro blanditiis aspernatur sapiente consequuntur neque ducimus temporibus accusamus cum nemo eius, nulla tempore? In hic libero fugiat quo!</p>
             </div>
-        </div>
+        </div> -->
     </div>
     
+    <script src="../static/js/index.js"></script>
 </body>
 
 </html>
